@@ -10,8 +10,8 @@ import com.ahmed.aventurier.main.reader.InputReader;
 import com.ahmed.aventurier.main.solver.AventurierSolver;
 
 public class AventurierRunner {
-   
-    public void start()  {
+
+    public void start() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Entrez le chemin d'accès au fichier de la carte: ");
@@ -24,18 +24,18 @@ public class AventurierRunner {
         InputReader inputReader = new InputReader();
 
         AventurierSolver aventurierSolver = new AventurierSolver();
-       
+
         Card card = cardReader.readCardFromFile(cardFilePath);
         Aventurier aventurier = inputReader.readAventurierFromFile(aventurierFilePath);
 
         try {
             aventurier = aventurierSolver.solve(aventurier, card);
         } catch (AlreadyInWoodsException e) {
-            
+
             e.printStackTrace();
         }
 
-        System.err.println("Le personnage se trouve en ("+aventurier.getX()+","+aventurier.getY()+")");
+        System.err.println("Le personnage se trouve en (" + aventurier.getX() + "," + aventurier.getY() + ")");
 
     }
 }

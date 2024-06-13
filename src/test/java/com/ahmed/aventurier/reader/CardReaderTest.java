@@ -1,4 +1,5 @@
 package com.ahmed.aventurier.reader;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -21,7 +22,7 @@ public class CardReaderTest {
 
     @Test
     public void testReadCardFromFile() throws IOException {
-        // Arrange
+        // prepare
         File testFile = tempFolder.newFile("testCard.txt");
         try (FileWriter writer = new FileWriter(testFile)) {
             writer.write("#  #\n");
@@ -30,10 +31,8 @@ public class CardReaderTest {
         }
 
         CardReader cardReader = new CardReader();
-
-        // Act
+        // get card
         Card card = cardReader.readCardFromFile(testFile.getAbsolutePath());
-
         // Assert
         assertEquals(3, card.getCardAsList().size());
         assertEquals(Arrays.asList("#", " ", " ", "#"), card.getCardAsList().get(0));
@@ -42,14 +41,12 @@ public class CardReaderTest {
     }
 
     @Test
-    public void testReadCardFromFileFileNotFound() {
-        // Arrange
+    public void testReadCardFromFileNotFound() {
+        // prepare
         CardReader cardReader = new CardReader();
-        String invalidFilePath = "invalid/path/to/nonexistentFile.txt";
-
-        // Act
+        String invalidFilePath = "invalid/path/file.txt";
+        // get card
         Card card = cardReader.readCardFromFile(invalidFilePath);
-
         // Assert
         assertTrue(card.getCardAsList().isEmpty());
     }

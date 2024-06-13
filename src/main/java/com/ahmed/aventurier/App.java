@@ -7,11 +7,9 @@ import com.ahmed.aventurier.main.exceptions.AlreadyInWoodsException;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args ) throws AlreadyInWoodsException
-    {
-        AventurierRunner aventurierRunner=new AventurierRunner();
+public class App {
+    public static void main(String[] args) throws AlreadyInWoodsException {
+        AventurierRunner aventurierRunner = new AventurierRunner();
         aventurierRunner.start();
     }
 }

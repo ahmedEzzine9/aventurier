@@ -12,11 +12,11 @@ public class AventurierSolver {
 
         if (isObstacle(card, x, y)) {
             throw new AlreadyInWoodsException();
-           
+
         }
 
         for (String move : aventurier.getMoves()) {
-            
+
             switch (move) {
                 case "S":
                     if (canMoveSouth(card, x, y))

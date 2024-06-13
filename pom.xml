@@ -31,7 +31,7 @@
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to
       parent pom) -->
       <plugins>
-        
+
         <!-- clean lifecycle, see
         https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -45,13 +45,13 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.3.0</version>
           <configuration>
-              <archive>
-                  <manifest>
-                      <mainClass>com.ahmed.aventurier.App</mainClass> <!-- Adjust with your main class -->
-                  </manifest>
-              </archive>
+            <archive>
+              <manifest>
+                <mainClass>com.ahmed.aventurier.App</mainClass> <!-- Adjust with your main class -->
+              </manifest>
+            </archive>
           </configuration>
-      </plugin>
+        </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>

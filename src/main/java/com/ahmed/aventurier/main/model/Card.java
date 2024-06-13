@@ -7,7 +7,7 @@ public class Card {
     private List<List<String>> cardAsList;
 
     public Card() {
-        this.cardAsList=new ArrayList<>();
+        this.cardAsList = new ArrayList<>();
     }
 
     public Card(List<List<String>> cardAsList) {

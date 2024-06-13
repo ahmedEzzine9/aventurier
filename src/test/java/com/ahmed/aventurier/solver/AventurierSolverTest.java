@@ -17,10 +17,10 @@ import java.util.Arrays;
 public class AventurierSolverTest {
     @Rule
     public ExpectedException exceptionRule = ExpectedException.none();
-    
+
     @Test
     public void testSolveWithoutObstacles() throws AlreadyInWoodsException {
-        
+
         Aventurier aventurier = new Aventurier();
         aventurier.setX(1);
         aventurier.setY(1);
@@ -36,7 +36,7 @@ public class AventurierSolverTest {
         // get Result
         Aventurier result = solver.solve(aventurier, card);
 
-        //assert result
+        // assert result
         assertEquals(1, result.getX());
         assertEquals(1, result.getY());
     }
@@ -66,7 +66,7 @@ public class AventurierSolverTest {
 
     @Test
     public void testSolveStartInObstacle() throws AlreadyInWoodsException {
-        // preapre aventurier 
+        // preapre aventurier
         Aventurier aventurier = new Aventurier();
         aventurier.setX(1);
         aventurier.setY(1);
@@ -82,7 +82,7 @@ public class AventurierSolverTest {
         // get result
         exceptionRule.expect(AlreadyInWoodsException.class);
         exceptionRule.expectMessage("Aventurier is Already in woods so he can't move");
-    
+
         solver.solve(aventurier, card);
     }
 }

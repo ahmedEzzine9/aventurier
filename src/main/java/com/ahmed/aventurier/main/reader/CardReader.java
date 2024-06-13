@@ -7,12 +7,11 @@ import java.util.Scanner;
 
 import com.ahmed.aventurier.main.model.Card;
 
-
-
 public class CardReader {
 
   /**
-   *  Extract Card from Text file
+   * Extract Card from Text file
+   * 
    * @param filePath
    * @return
    */

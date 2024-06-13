@@ -45,12 +45,11 @@ public class Aventurier {
         this.moves = moves;
     }
 
-    public void incrementX()
-    {
+    public void incrementX() {
         this.x++;
     }
-    public void incrementY()
-    {
+
+    public void incrementY() {
         this.y++;
     }
 }
