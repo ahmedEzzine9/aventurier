@@ -47,7 +47,7 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>com.ahmed.aventurier.App</mainClass> <!-- Adjust with your main class -->
+                <mainClass>com.ahmed.aventurier.App</mainClass>
               </manifest>
             </archive>
           </configuration>
