@@ -79,10 +79,10 @@ public class AventurierSolverTest {
 
         AventurierSolver solver = new AventurierSolver();
 
-        // get result
+        // set the exception rules
         exceptionRule.expect(AlreadyInWoodsException.class);
         exceptionRule.expectMessage("Aventurier is Already in woods so he can't move");
-
+        // try to throw AlreadyInWoodsException
         solver.solve(aventurier, card);
     }
 }
